@@ -10,9 +10,9 @@
             theme: {
                 extend: {
                     colors: {
-                        bg: '#12161A', // Dunkler Hintergrund wie Vorlage
-                        bgAlt: '#1A1E24', // Etwas helleres Grau für Kontraste
-                        brand: '#728066', // Olivgrün aus Flyer
+                        bg: '#12161A', 
+                        bgAlt: '#1A1E24', 
+                        brand: '#728066', 
                         brandLight: '#8A997D',
                         brandDark: '#5E6953',
                         text: '#FFFFFF',
@@ -31,25 +31,17 @@
     <style>
         body { font-family: 'Inter', sans-serif; color: #FFFFFF; background-color: #12161A; }
         h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
-        
-        /* Stylische Navbar */
         .glass-nav {
             background: rgba(18, 22, 26, 0.9);
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        
-        /* Stil für die FAQ-Details */
-        details[open] summary ~ * {
-            animation: slideDown 0.3s ease-out;
-        }
+        details[open] summary ~ * { animation: slideDown 0.3s ease-out; }
         @keyframes slideDown {
             0% { opacity: 0; transform: translateY(-10px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-        details summary::-webkit-details-marker {
-            display: none;
-        }
+        details summary::-webkit-details-marker { display: none; }
         details summary:after {
             content: "+";
             color: #728066;
@@ -81,11 +73,12 @@
                     <a href="#details" class="hover:text-text transition">Details</a>
                     <a href="#programm" class="hover:text-text transition">Programm</a>
                     <a href="#dozenten" class="hover:text-text transition">Dozenten</a>
+                    <a href="#buchung" class="hover:text-text transition">Buchung</a>
                     <a href="#faq" class="hover:text-text transition">FAQ</a>
                 </div>
                 <div>
-                    <a href="#anmeldung" class="bg-brand hover:bg-brandDark text-white px-6 py-2.5 rounded-full font-medium text-sm transition duration-300 shadow-md">
-                        Jetzt Platz sichern
+                    <a href="#buchung" class="bg-brand hover:bg-brandDark text-white px-6 py-2.5 rounded-full font-medium text-sm transition duration-300 shadow-md">
+                        Jetzt anmelden
                     </a>
                 </div>
             </div>
@@ -93,33 +86,28 @@
     </nav>
 
     <section class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-black">
-        <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Hintergrund Reiterin" class="absolute inset-0 w-full h-full object-cover opacity-30 blur-[2px]">
-        
+        <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Hintergrund" class="absolute inset-0 w-full h-full object-cover opacity-30 blur-[2px]">
         <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/90 to-transparent"></div>
-
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
             <div class="inline-flex items-center gap-3 bg-brand/10 border border-brand/20 text-brandLight font-semibold px-5 py-2 rounded-full mb-8 text-sm">
                 <i class="fa-regular fa-calendar"></i> 15. & 16. August 2026
                 <span class="text-textDim">|</span>
-                <i class="fa-solid fa-location-dot"></i> Zülichendorf (Brandenburg)
+                <i class="fa-solid fa-location-dot"></i> Zülichendorf
             </div>
-            
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-8">
                 Zügelkräfte <span class="italic text-brandLight">&</span> <br>Reitersitz
             </h1>
-            
             <p class="text-2xl md:text-3xl font-serif italic text-textDim mb-4 max-w-4xl mx-auto">
                 Verstehen – Spüren – Verändern.
             </p>
             <p class="text-lg md:text-xl text-textDim mb-12 max-w-2xl mx-auto leading-relaxed">
-                Wie Sitz, Balance und Zügelkontakt Dein Pferd beeinflussen. Ein intensiver 2-Tageskurs für feinere Hilfengebung und pferdegerechtes Reiten.
+                Wie Sitz, Balance und Zügelkontakt Dein Pferd beeinflussen. Ein intensiver 2-Tageskurs für feinere Hilfengebung.
             </p>
-            
             <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#anmeldung" class="bg-white hover:bg-white/90 text-gray-900 px-10 py-4 rounded-full font-semibold text-lg transition duration-300 shadow-xl flex items-center justify-center gap-2">
-                    Jetzt Anmelden <i class="fa-solid fa-arrow-right text-sm"></i>
+                <a href="#buchung" class="bg-white hover:bg-white/90 text-gray-900 px-10 py-4 rounded-full font-semibold text-lg transition duration-300 shadow-xl flex items-center justify-center gap-2">
+                    Direkt anmelden <i class="fa-solid fa-arrow-right text-sm"></i>
                 </a>
-                <a href="#details" class="bg-bgAlt hover:bg-bgAlt/80 text-white border border-white/10 px-10 py-4 rounded-full font-medium text-lg transition duration-300 shadow-sm flex items-center justify-center">
+                <a href="#details" class="bg-bgAlt hover:bg-bgAlt/80 text-white border border-white/10 px-10 py-4 rounded-full font-medium text-lg transition duration-300 shadow-sm">
                     Mehr erfahren
                 </a>
             </div>
@@ -128,9 +116,8 @@
 
     <section id="details" class="py-24 bg-bgAlt">
         <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-10 text-white leading-tight">Über den Kurs</h2>
-            
-            <div class="text-lg text-textDim leading-relaxed space-y-6 mx-auto">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-10 text-white">Über den Kurs</h2>
+            <div class="text-lg text-textDim leading-relaxed space-y-6">
                 <p>
                     In diesem intensiven Wochenendkurs machen wir <strong>Zügelkräfte</strong> sichtbar und analysieren den direkten Einfluss des <strong>Reitersitzes</strong> auf Losgelassenheit, Balance und Kommunikation mit dem Pferd.
                 </p>
@@ -140,7 +127,7 @@
                     </div>
                     <div class="text-left">
                         <p class="font-semibold text-white mb-1">Inklusive TensionCARE App & Gerät</p>
-                        <p class="text-sm">Wir nutzen modernste Technologie für direktes, visuelles Feedback zu Deinen Zügelhilfen. Du lernst, feiner, bewusster und konstanter pferdegerecht einzuwirken.</p>
+                        <p class="text-sm">Wir nutzen modernste Technologie für direktes, visuelles Feedback zu Deinen Zügelhilfen. Du lernst, feiner und bewusster pferdegerecht einzuwirken.</p>
                     </div>
                 </div>
                 <p>
@@ -153,34 +140,25 @@
     <section class="py-24 bg-bg">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">Ist dieser Kurs für mich?</h2>
-                <p class="text-xl text-textDim">Perfekt für Reiter:innen aller Disziplinen und Ausbildungsstände, die...</p>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Ist dieser Kurs für mich?</h2>
+                <p class="text-xl text-textDim">Perfekt für Reiter:innen aller Disziplinen, die...</p>
             </div>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
-                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
-                        <i class="fa-solid fa-person"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Sitz verbessern wollen</h3>
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 text-center">
+                    <div class="w-16 h-16 bg-white/5 text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fa-solid fa-person"></i></div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Sitz verbessern</h3>
                 </div>
-                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
-                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
-                        <i class="fa-solid fa-hand-holding-hand"></i>
-                    </div>
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 text-center">
+                    <div class="w-16 h-16 bg-white/5 text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fa-solid fa-hand-holding-hand"></i></div>
                     <h3 class="text-xl font-semibold text-white mb-2">Bewusster einwirken</h3>
                 </div>
-                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
-                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
-                        <i class="fa-solid fa-feather"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Feiner reiten wollen</h3>
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 text-center">
+                    <div class="w-16 h-16 bg-white/5 text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fa-solid fa-feather"></i></div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Feiner reiten</h3>
                 </div>
-                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
-                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Ihr Pferd verstehen</h3>
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 text-center">
+                    <div class="w-16 h-16 bg-white/5 text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fa-solid fa-heart"></i></div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Pferd verstehen</h3>
                 </div>
             </div>
         </div>
@@ -188,65 +166,187 @@
 
     <section id="programm" class="py-24 bg-bgAlt">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">Programmablauf</h2>
-                <p class="text-xl text-textDim mt-4">Unser Intensiv-Wochenende im Detail</p>
-            </div>
-            
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-center text-white mb-20">Programmablauf</h2>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-bg p-10 rounded-2xl border border-white/5 relative">
                     <div class="absolute -top-5 left-10 bg-brand text-white px-6 py-2 rounded-full font-bold text-lg">Tag 1</div>
-                    <p class="text-sm text-textDim mt-6 mb-8">Samstag, 15. August 2026 | ca. 09:00 – 17:00 Uhr</p>
-                    <ul class="space-y-6 text-textDim">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
-                            <div><strong class="text-text">Vormittag: Theorie & Analyse</strong><br>Grundlagen der Zügelkräfte, Biomechanik von Reitersitz und Pferd. Sitzanalyse.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
-                            <div><strong class="text-text">Bodenarbeit & Visualisierung</strong><br>Übungen am Boden ohne Pferd für Sitz und Gefühl. Einführung TensionCARE.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
-                            <div><strong class="text-text">Nachmittag: Erste Reitpraxis</strong><br>Reiten mit TensionCARE-Feedback (individuelle Zeiteinteilung).</div>
-                        </li>
+                    <p class="text-sm text-textDim mt-6 mb-6">Samstag, 15. August 2026 | ca. 09:00 – 17:00 Uhr</p>
+                    <ul class="space-y-4 text-textDim">
+                        <li><strong class="text-text">Vormittag: Theorie & Analyse</strong><br>Grundlagen der Zügelkräfte, Biomechanik von Reitersitz und Pferd.</li>
+                        <li><strong class="text-text">Bodenarbeit & Visualisierung</strong><br>Übungen am Boden ohne Pferd für Sitz und Gefühl.</li>
+                        <li><strong class="text-text">Nachmittag: Reitpraxis</strong><br>Reiten mit individuellem TensionCARE-Feedback.</li>
                     </ul>
                 </div>
-                
                 <div class="bg-bg p-10 rounded-2xl border border-white/5 relative">
                     <div class="absolute -top-5 left-10 bg-brand text-white px-6 py-2 rounded-full font-bold text-lg">Tag 2</div>
-                    <p class="text-sm text-textDim mt-6 mb-8">Sonntag, 16. August 2026 | ca. 09:00 – 16:00 Uhr</p>
-                    <ul class="space-y-6 text-textDim">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
-                            <div><strong class="text-text">Vormittag: Vertiefung</strong><br>Gezielte Sitzkorrekturen, Arbeit an Feinheit und Balance.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
-                            <div><strong class="text-text">Reitpraxis Teil 2</strong><br>Intensive Einzelarbeit im Sattel mit TensionCARE-Unterstützung.</div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
-                            <div><strong class="text-text">Nachmittag: Fazit & Zukunft</strong><br>Abschlussbesprechung, Strategien für das Training zu Hause.</div>
-                        </li>
+                    <p class="text-sm text-textDim mt-6 mb-6">Sonntag, 16. August 2026 | ca. 09:00 – 16:00 Uhr</p>
+                    <ul class="space-y-4 text-textDim">
+                        <li><strong class="text-text">Vormittag: Vertiefung</strong><br>Gezielte Sitzkorrekturen, Arbeit an Feinheit und Balance.</li>
+                        <li><strong class="text-text">Reitpraxis Teil 2</strong><br>Intensive Einzelarbeit im Sattel mit Messgerät.</li>
+                        <li><strong class="text-text">Nachmittag: Fazit & Ausblick</strong><br>Abschlussbesprechung, Strategien für zu Hause.</li>
                     </ul>
                 </div>
             </div>
-            <p class="text-center text-xs text-textDim mt-12"><em>*Konkrete Uhrzeiten können je nach Teilnehmerzahl leicht variieren.</em></p>
         </div>
     </section>
 
     <section id="dozenten" class="py-24 bg-bg">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-center text-white leading-tight mb-20">Deine Kursleiterinnen</h2>
-            
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-center text-white mb-20">Deine Kursleiterinnen</h2>
             <div class="grid md:grid-cols-2 gap-16">
                 <div class="text-center p-8 bg-bgAlt rounded-2xl border border-white/5">
-                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-10 border-4 border-brand/20 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1574519965008-013110ff4c10?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Schanz Portrait Platzhalter" class="w-full h-full object-cover">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-8 border-4 border-brand/20">
+                        <img src="https://images.unsplash.com/photo-1574519965008-013110ff4c10?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Schanz" class="w-full h-full object-cover">
                     </div>
                     <h3 class="text-3xl font-serif font-bold text-white mb-2">Lisa Schanz</h3>
-                    <p class="text-brand font-medium mb-6 text-xl">Pferdetrainerin & Therapeutin</p>
-                    <p class="text-textDim leading-relaxed mb-10">Spezialisiert auf biomechanisch korrektes Training und pferdegerechte Kommunikation am Boden und im Sattel.</p>
-                    <a href="https://www.pferdetrainingschanz.com" target="_blank" class="text-textDim hover:text-brand flex items-center justify-center gap-2 transition duration-300">
-                        <i class="
+                    <p class="text-brand font-medium mb-4 text-xl">Pferdetrainerin & Therapeutin</p>
+                    <p class="text-textDim mb-6">Spezialisiert auf biomechanisch korrektes Training und pferdegerechte Kommunikation am Boden und im Sattel.</p>
+                    <a href="https://www.pferdetrainingschanz.com" target="_blank" class="text-textDim hover:text-brand text-sm"><i class="fa-solid fa-globe mr-2"></i>pferdetrainingschanz.com</a>
+                </div>
+                <div class="text-center p-8 bg-bgAlt rounded-2xl border border-white/5">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-8 border-4 border-brand/20">
+                        <img src="https://images.unsplash.com/photo-1553531087-b25a0b9a68ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ina Przystawski" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-3xl font-serif font-bold text-white mb-2">Ina Przystawski</h3>
+                    <p class="text-brand font-medium mb-4 text-xl">Pferdewissenschaftlerin & Therapeutin</p>
+                    <p class="text-textDim mb-6">Kombiniert wissenschaftliche Erkenntnisse mit langjähriger therapeutischer Erfahrung für gesundes, nachhaltiges Pferdetraining.</p>
+                    <a href="https://www.equina-pferdetraining.de" target="_blank" class="text-textDim hover:text-brand text-sm"><i class="fa-solid fa-globe mr-2"></i>equina-pferdetraining.de</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-bgAlt">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-center text-white mb-20">Kursoptionen & Preise</h2>
+            <div class="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="bg-bg p-10 rounded-2xl border border-white/5 text-center flex flex-col justify-between">
+                    <div>
+                        <div class="text-5xl font-serif font-bold text-white mb-3">120 €</div>
+                        <p class="text-brand font-semibold mb-8">Zuschauer (Gesamtwochenende)</p>
+                        <ul class="space-y-4 text-textDim text-left max-w-sm mx-auto mb-10">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Kompletter Theorie-Unterricht</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Beobachtung aller Praxis-Einheiten</li>
+                            <li class="flex items-center gap-3 text-gray-600"><i class="fa-solid fa-xmark text-red-500/50"></i> Keine eigene Reit-Einheit</li>
+                        </ul>
+                    </div>
+                    <a href="#buchung" class="w-full bg-bgAlt border border-white/10 hover:bg-white/10 text-white font-semibold py-4 rounded-xl transition">Als Zuschauer wählen</a>
+                </div>
+                <div class="bg-bg p-10 rounded-2xl border-4 border-brand text-center flex flex-col justify-between shadow-2xl relative">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand text-white px-5 py-1.5 rounded-full font-bold text-xs">Limitiere Plätze</div>
+                    <div>
+                        <div class="text-5xl font-serif font-bold text-white mb-3">330 €</div>
+                        <p class="text-brand font-semibold mb-8">Aktiver Teilnehmer (mit Pferd)</p>
+                        <ul class="space-y-4 text-textDim text-left max-w-sm mx-auto mb-10">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Eigene Reiteinheiten an beiden Tagen</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> TensionCARE Nutzung inklusive</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand"></i> Kompletter Theorie-Unterricht</li>
+                        </ul>
+                    </div>
+                    <a href="#buchung" class="w-full bg-brand hover:bg-brandDark text-white font-semibold py-4 rounded-xl transition">Aktiv teilnehmen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="buchung" class="py-24 bg-bg">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <div class="bg-bgAlt p-8 md:p-12 rounded-3xl border border-white/5 shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2">Kursplatz anfragen</h2>
+                    <p class="text-textDim text-sm">Sende uns direkt deine Anfrage für den Kurs im August 2026.</p>
+                </div>
+                
+                <form action="https://formsubmit.co/HIER_EURE_EMAIL_EINTRAGEN@domain.de" method="POST" class="space-y-6">
+                    
+                    <input type="hidden" name="_subject" value="Neue Kursanmeldung: Zügelkräfte & Reitersitz">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div>
+                        <label class="block text-sm font-medium text-textDim mb-2">Dein vollständiger Name</label>
+                        <input type="text" name="Name" required placeholder="z.B. Max Mustermann" class="w-full bg-bg border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-textDim mb-2">Deine E-Mail-Adresse</label>
+                        <input type="email" name="Email" required placeholder="name@beispiel.de" class="w-full bg-bg border border-white/10 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brand transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-textDim mb-3">Teilnahmeart</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <label class="bg-bg border border-white/10 rounded-xl p-4 flex items-center gap-3 cursor-pointer hover:border-brand/50 transition">
+                                <input type="radio" name="Teilnahmeart" value="Zuschauer (120 Euro)" checked class="w-4 h-4 text-brand bg-bg border-white/20 focus:ring-brand">
+                                <div>
+                                    <p class="font-medium text-white text-sm">Zuschauer</p>
+                                    <p class="text-xs text-textDim">120 € | Theorie & Beobachtung</p>
+                                </div>
+                            </label>
+                            <label class="bg-bg border border-white/10 rounded-xl p-4 flex items-center gap-3 cursor-pointer hover:border-brand/50 transition">
+                                <input type="radio" name="Teilnahmeart" value="Aktiver Teilnehmer mit Pferd (330 Euro)" class="w-4 h-4 text-brand bg-bg border-white/20 focus:ring-brand">
+                                <div>
+                                    <p class="font-medium text-white text-sm">Aktiver Teilnehmer</p>
+                                    <p class="text-xs text-textDim">330 € | Mit eigenem Pferd</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-brand hover:bg-brandDark text-white font-bold py-4 rounded-xl text-lg transition duration-300 shadow-lg flex items-center justify-center gap-3 mt-4">
+                        <i class="fa-solid fa-paper-plane text-xl"></i> Anfrage verbindlich senden
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-bgAlt">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-center text-white mb-16">Häufig gestellte Fragen (FAQ)</h2>
+            <div class="space-y-4">
+                <details class="bg-bg p-6 rounded-2xl border border-white/5 group relative cursor-pointer">
+                    <summary class="font-semibold text-white pr-10 list-none relative text-lg">Was brauche ich für die aktive Teilnahme?</summary>
+                    <p class="text-textDim leading-relaxed mt-4 text-sm">Ein passendes Halfter/Zäumung, ggf. Pad/Sattel, einen Reithelm und ein Pferd auf passendem Ausbildungsstand. Messgeräte werden gestellt.</p>
+                </details>
+                <details class="bg-bg p-6 rounded-2xl border border-white/5 group relative cursor-pointer">
+                    <summary class="font-semibold text-white pr-10 list-none relative text-lg">Sind Pferde-Boxen vor Ort verfügbar?</summary>
+                    <p class="text-textDim leading-relaxed mt-4 text-sm">Ja, in Zülichendorf stehen begrenzte Tages- und Übernachtungsboxen zur Verfügung. Bitte frage diese im Nachgang bei der Anmeldung direkt mit an.</p>
+                </details>
+                <details class="bg-bg p-6 rounded-2xl border border-white/5 group relative cursor-pointer">
+                    <summary class="font-semibold text-white pr-10 list-none relative text-lg">Was genau ist TensionCARE?</summary>
+                    <p class="text-textDim leading-relaxed mt-4 text-sm">Ein mobiles Messgerät, das direkt am Zügel befestigt wird. Es misst die Zugkräfte in Echtzeit und spiegelt sie visuell in einer App wider, um deine Hilfengebung präzise zu analysieren.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand text-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8">Veranstaltungsort & Kontakt</h2>
+            <div class="bg-white text-gray-900 rounded-3xl p-10 shadow-2xl flex flex-col md:flex-row items-center gap-10 text-left max-w-4xl mx-auto">
+                <div class="flex-1 space-y-3">
+                    <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Standort</p>
+                    <p class="text-xl font-medium text-gray-800 flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-brand mt-1"></i>
+                        <span>Dorfanger 13a<br>14947 Nuthe-Urstromtal<br>Ortsteil Zülichendorf</span>
+                    </p>
+                </div>
+                <div class="w-full md:w-px h-px md:h-28 bg-gray-200"></div>
+                <div class="flex-1 space-y-3">
+                    <p class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Kontakt (Lisa Schanz)</p>
+                    <p class="text-lg text-gray-700">Bei offenen Fragen erreichst du uns jederzeit telefonisch:</p>
+                    <p class="text-xl font-bold text-brand"><i class="fa-solid fa-phone mr-2"></i>0151 65183649</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-textDim py-12 text-center border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-center gap-6 mb-6 text-sm">
+                <a href="https://www.pferdetrainingschanz.com" target="_blank" class="hover:text-white transition">pferdetrainingschanz.com</a>
+                <span>|</span>
+                <a href="https://www.equina-pferdetraining.de" target="_blank" class="hover:text-white transition">equina-pferdetraining.de</a>
+            </div>
+            <p class="text-xs">© 2026 Lisa Schanz & Ina Przystawski. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zügelkräfte & Reitersitz | Intensivkurs 2026 | Lisa Schanz & Ina Przystawski</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#12161A', // Dunkler Hintergrund wie Vorlage
+                        bgAlt: '#1A1E24', // Etwas helleres Grau für Kontraste
+                        brand: '#728066', // Olivgrün aus Flyer
+                        brandLight: '#8A997D',
+                        brandDark: '#5E6953',
+                        text: '#FFFFFF',
+                        textDim: '#A3A3A3',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; color: #FFFFFF; background-color: #12161A; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        /* Stylische Navbar */
+        .glass-nav {
+            background: rgba(18, 22, 26, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        /* Stil für die FAQ-Details */
+        details[open] summary ~ * {
+            animation: slideDown 0.3s ease-out;
+        }
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary:after {
+            content: "+";
+            color: #728066;
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+        details[open] summary:after {
+            content: "-";
+            transform: translateY(-50%) rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center">
+                        <i class="fa-solid fa-horse-head text-brand text-lg"></i>
+                    </div>
+                    <span class="font-sans font-semibold text-lg tracking-tight">KURS 2026</span>
+                </div>
+                <div class="hidden md:flex items-center gap-6 text-sm text-textDim">
+                    <a href="#details" class="hover:text-text transition">Details</a>
+                    <a href="#programm" class="hover:text-text transition">Programm</a>
+                    <a href="#dozenten" class="hover:text-text transition">Dozenten</a>
+                    <a href="#faq" class="hover:text-text transition">FAQ</a>
+                </div>
+                <div>
+                    <a href="#anmeldung" class="bg-brand hover:bg-brandDark text-white px-6 py-2.5 rounded-full font-medium text-sm transition duration-300 shadow-md">
+                        Jetzt Platz sichern
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-black">
+        <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Hintergrund Reiterin" class="absolute inset-0 w-full h-full object-cover opacity-30 blur-[2px]">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/90 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-3 bg-brand/10 border border-brand/20 text-brandLight font-semibold px-5 py-2 rounded-full mb-8 text-sm">
+                <i class="fa-regular fa-calendar"></i> 15. & 16. August 2026
+                <span class="text-textDim">|</span>
+                <i class="fa-solid fa-location-dot"></i> Zülichendorf (Brandenburg)
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-8">
+                Zügelkräfte <span class="italic text-brandLight">&</span> <br>Reitersitz
+            </h1>
+            
+            <p class="text-2xl md:text-3xl font-serif italic text-textDim mb-4 max-w-4xl mx-auto">
+                Verstehen – Spüren – Verändern.
+            </p>
+            <p class="text-lg md:text-xl text-textDim mb-12 max-w-2xl mx-auto leading-relaxed">
+                Wie Sitz, Balance und Zügelkontakt Dein Pferd beeinflussen. Ein intensiver 2-Tageskurs für feinere Hilfengebung und pferdegerechtes Reiten.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#anmeldung" class="bg-white hover:bg-white/90 text-gray-900 px-10 py-4 rounded-full font-semibold text-lg transition duration-300 shadow-xl flex items-center justify-center gap-2">
+                    Jetzt Anmelden <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <a href="#details" class="bg-bgAlt hover:bg-bgAlt/80 text-white border border-white/10 px-10 py-4 rounded-full font-medium text-lg transition duration-300 shadow-sm flex items-center justify-center">
+                    Mehr erfahren
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="details" class="py-24 bg-bgAlt">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-10 text-white leading-tight">Über den Kurs</h2>
+            
+            <div class="text-lg text-textDim leading-relaxed space-y-6 mx-auto">
+                <p>
+                    In diesem intensiven Wochenendkurs machen wir <strong>Zügelkräfte</strong> sichtbar und analysieren den direkten Einfluss des <strong>Reitersitzes</strong> auf Losgelassenheit, Balance und Kommunikation mit dem Pferd.
+                </p>
+                <div class="flex flex-col md:flex-row items-center gap-6 p-6 bg-bg rounded-2xl border border-white/5 my-10">
+                    <div class="flex-none w-16 h-16 bg-brand/10 text-brand rounded-full flex items-center justify-center text-3xl">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-semibold text-white mb-1">Inklusive TensionCARE App & Gerät</p>
+                        <p class="text-sm">Wir nutzen modernste Technologie für direktes, visuelles Feedback zu Deinen Zügelhilfen. Du lernst, feiner, bewusster und konstanter pferdegerecht einzuwirken.</p>
+                    </div>
+                </div>
+                <p>
+                    Der Kurs verbindet verständliche Theorie, praktische Übungen am Boden und individuelle Betreuung im Sattel. Unser Ziel ist mehr Gefühl, Klarheit und wahre Harmonie zwischen Pferd und Reiter.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-bg">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">Ist dieser Kurs für mich?</h2>
+                <p class="text-xl text-textDim">Perfekt für Reiter:innen aller Disziplinen und Ausbildungsstände, die...</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
+                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Sitz verbessern wollen</h3>
+                </div>
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
+                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
+                        <i class="fa-solid fa-hand-holding-hand"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Bewusster einwirken</h3>
+                </div>
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
+                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
+                        <i class="fa-solid fa-feather"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Feiner reiten wollen</h3>
+                </div>
+                <div class="bg-bgAlt p-8 rounded-2xl border border-white/5 hover:border-brand/30 hover:bg-bgAlt/80 transition group text-center">
+                    <div class="w-16 h-16 bg-white/5 text-white/50 group-hover:bg-brand/10 group-hover:text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6 transition">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Ihr Pferd verstehen</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programm" class="py-24 bg-bgAlt">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">Programmablauf</h2>
+                <p class="text-xl text-textDim mt-4">Unser Intensiv-Wochenende im Detail</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-bg p-10 rounded-2xl border border-white/5 relative">
+                    <div class="absolute -top-5 left-10 bg-brand text-white px-6 py-2 rounded-full font-bold text-lg">Tag 1</div>
+                    <p class="text-sm text-textDim mt-6 mb-8">Samstag, 15. August 2026 | ca. 09:00 – 17:00 Uhr</p>
+                    <ul class="space-y-6 text-textDim">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
+                            <div><strong class="text-text">Vormittag: Theorie & Analyse</strong><br>Grundlagen der Zügelkräfte, Biomechanik von Reitersitz und Pferd. Sitzanalyse.</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
+                            <div><strong class="text-text">Bodenarbeit & Visualisierung</strong><br>Übungen am Boden ohne Pferd für Sitz und Gefühl. Einführung TensionCARE.</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
+                            <div><strong class="text-text">Nachmittag: Erste Reitpraxis</strong><br>Reiten mit TensionCARE-Feedback (individuelle Zeiteinteilung).</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-bg p-10 rounded-2xl border border-white/5 relative">
+                    <div class="absolute -top-5 left-10 bg-brand text-white px-6 py-2 rounded-full font-bold text-lg">Tag 2</div>
+                    <p class="text-sm text-textDim mt-6 mb-8">Sonntag, 16. August 2026 | ca. 09:00 – 16:00 Uhr</p>
+                    <ul class="space-y-6 text-textDim">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
+                            <div><strong class="text-text">Vormittag: Vertiefung</strong><br>Gezielte Sitzkorrekturen, Arbeit an Feinheit und Balance.</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
+                            <div><strong class="text-text">Reitpraxis Teil 2</strong><br>Intensive Einzelarbeit im Sattel mit TensionCARE-Unterstützung.</div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brand mt-1.5 flex-none"></i>
+                            <div><strong class="text-text">Nachmittag: Fazit & Zukunft</strong><br>Abschlussbesprechung, Strategien für das Training zu Hause.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-xs text-textDim mt-12"><em>*Konkrete Uhrzeiten können je nach Teilnehmerzahl leicht variieren.</em></p>
+        </div>
+    </section>
+
+    <section id="dozenten" class="py-24 bg-bg">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-center text-white leading-tight mb-20">Deine Kursleiterinnen</h2>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="text-center p-8 bg-bgAlt rounded-2xl border border-white/5">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-10 border-4 border-brand/20 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1574519965008-013110ff4c10?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Schanz Portrait Platzhalter" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-3xl font-serif font-bold text-white mb-2">Lisa Schanz</h3>
+                    <p class="text-brand font-medium mb-6 text-xl">Pferdetrainerin & Therapeutin</p>
+                    <p class="text-textDim leading-relaxed mb-10">Spezialisiert auf biomechanisch korrektes Training und pferdegerechte Kommunikation am Boden und im Sattel.</p>
+                    <a href="https://www.pferdetrainingschanz.com" target="_blank" class="text-textDim hover:text-brand flex items-center justify-center gap-2 transition duration-300">
+                        <i class="

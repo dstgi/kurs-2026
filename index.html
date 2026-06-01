@@ -60,15 +60,18 @@
 </head>
 <body class="antialiased">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20 gap-3">
+                
+                <div class="flex-shrink flex items-center gap-2 md:gap-3 min-w-0">
+                    <div class="flex-shrink-0 w-10 h-10 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center">
                         <i class="fa-solid fa-horse-head text-brand text-lg"></i>
                     </div>
-                    <span class="font-sans font-semibold text-lg tracking-tight">Zügelkräfte & Reitersitz | Kurs 2026</span>
+                    <span class="font-sans font-semibold text-sm md:text-lg tracking-tight truncate">Zügelkräfte & Reitersitz | Kurs 2026</span>
                 </div>
+
                 <div class="hidden md:flex items-center gap-6 text-sm text-textDim">
                     <a href="#details" class="hover:text-text transition">Details</a>
                     <a href="#programm" class="hover:text-text transition">Programm</a>
@@ -76,8 +79,9 @@
                     <a href="#buchung" class="hover:text-text transition">Buchung</a>
                     <a href="#faq" class="hover:text-text transition">FAQ</a>
                 </div>
-                <div>
-                    <a href="#buchung" class="bg-brand hover:bg-brandDark text-white px-6 py-2.5 rounded-full font-medium text-sm transition duration-300 shadow-md">
+                
+                <div class="flex-shrink-0">
+                    <a href="#buchung" class="bg-brand hover:bg-brandDark text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium text-sm transition duration-300 shadow-md whitespace-nowrap">
                         Jetzt anmelden
                     </a>
                 </div>
@@ -249,7 +253,7 @@
             <div class="grid lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
                 <div class="bg-bg p-10 rounded-2xl border border-white/5 text-center flex flex-col justify-between transition hover:border-brand/30">
                     <div>
-                        <div class="text-5xl font-serif font-bold text-white mb-3">ab 35 €</div>
+                        <div class="text-5xl font-serif font-bold text-white mb-3">ab 40 €</div>
                         <p class="text-brand font-semibold mb-8">Zuschauer (1 oder 2 Tage)</p>
                         <ul class="space-y-4 text-textDim text-left max-w-sm mx-auto mb-10 list-none pl-0">
                             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand flex-none"></i> Kompletter Theorie-Unterricht</li>
@@ -334,21 +338,21 @@
                                 </p>
                                 <div class="p-3 space-y-2">
                                     <label class="flex items-center gap-3 cursor-pointer p-4 rounded-xl hover:bg-white/5 transition">
-                                        <input type="radio" name="Teilnahmeart" value="Zuschauer (Beide Tage, 60 Euro)" checked class="w-5 h-5 text-brand bg-bgAlt border-white/20 focus:ring-brand">
+                                        <input type="radio" name="Teilnahmeart" value="Zuschauer (Beide Tage, 70 Euro)" checked class="w-5 h-5 text-brand bg-bgAlt border-white/20 focus:ring-brand">
                                         <div>
                                             <p class="font-medium text-white text-sm">Ganzes Wochenende (Sa. & So.)</p>
                                             <p class="text-xs text-textDim">70 € | Sa. & So.</p>
                                         </div>
                                     </label>
                                     <label class="flex items-center gap-3 cursor-pointer p-4 rounded-xl hover:bg-white/5 transition">
-                                        <input type="radio" name="Teilnahmeart" value="Zuschauer (Nur Samstag, 35 Euro)" class="w-5 h-5 text-brand bg-bgAlt border-white/20 focus:ring-brand">
+                                        <input type="radio" name="Teilnahmeart" value="Zuschauer (Nur Samstag, 40 Euro)" class="w-5 h-5 text-brand bg-bgAlt border-white/20 focus:ring-brand">
                                         <div>
                                             <p class="font-medium text-white text-sm">Nur Samstag</p>
                                             <p class="text-xs text-textDim">40 € | Theorie & erste Praxis</p>
                                         </div>
                                     </label>
                                     <label class="flex items-center gap-3 cursor-pointer p-4 rounded-xl hover:bg-white/5 transition">
-                                        <input type="radio" name="Teilnahmeart" value="Zuschauer (Nur Sonntag, 35 Euro)" class="w-5 h-5 text-brand bg-bgAlt border-white/20 focus:ring-brand">
+                                        <input type="radio" name="Teilnahmeart" value="Zuschauer (Nur Sonntag, 40 Euro)" class="w-5 h-5 text-brand bg-bgAlt border-white/20 focus:ring-brand">
                                         <div>
                                             <p class="font-medium text-white text-sm">Nur Sonntag</p>
                                             <p class="text-xs text-textDim">40 € | Vertiefung & Korrektur</p>
@@ -388,19 +392,50 @@
         </div>
     </section>
 
-<!-- Podcast Section -->
-    <section class="py-16 bg-bgAlt border-y border-white/5">
-        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            <div class="w-16 h-16 bg-brand/10 text-brand rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
-                <i class="fa-solid fa-microphone-lines"></i>
+<!-- Podcast/Blog Section -->
+    <section class="py-20 bg-bgAlt border-y border-white/5">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 bg-brand/10 text-brandLight font-medium px-4 py-1.5 rounded-full text-xs mb-4">
+                    <i class="fa-solid fa-lightbulb"></i> Mehr erfahren vor dem Kurs
+                </div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Noch mehr Inspiration für euer Training</h2>
+                <p class="text-textDim max-w-2xl mx-auto text-sm md:text-base">
+                    Taucht schon vor unserem Intensivwochenende tiefer in unsere Philosophie ein und nehmt wertvolle Impulse für euren Alltag mit dem Pferd mit.
+                </p>
             </div>
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Hör mal rein: "Unbalanced" Podcast</h2>
-            <p class="text-textDim text-lg mb-8 max-w-2xl mx-auto">
-                Möchtest du Lisa schon vor dem Kurs etwas besser kennenlernen? In ihrem Podcast spricht sie regelmäßig über feines Pferdetraining, Biomechanik und den fairen Umgang mit dem Partner Pferd.
-            </p>
-            <a href="https://www.pferdetrainingschanz.com/unbalanced-podcast" target="_blank" class="inline-flex items-center gap-3 bg-white text-gray-900 hover:bg-gray-200 px-8 py-4 rounded-full font-semibold text-lg transition duration-300 shadow-lg">
-                <i class="fa-solid fa-headphones"></i> Zum Podcast
-            </a>
+            
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-bg p-8 md:p-10 rounded-2xl border border-white/5 text-center flex flex-col justify-between items-center transition hover:border-brand/30 shadow-lg group">
+                    <div>
+                        <div class="w-14 h-14 bg-brand/10 text-brand group-hover:bg-brand/20 rounded-full flex items-center justify-center text-2xl mb-6 mx-auto transition">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-3">Lisas "Unbalanced" Podcast</h3>
+                        <p class="text-textDim text-sm leading-relaxed mb-8">
+                            Möchtest du Lisa schon vorab kennenlernen? In ihrem Podcast spricht sie regelmäßig über feines Pferdetraining, Biomechanik, pferdegerechte Hilfengebung und den fairen Umgang mit dem Partner Pferd.
+                        </p>
+                    </div>
+                    <a href="https://www.pferdetrainingschanz.com/unbalanced-podcast" target="_blank" class="inline-flex items-center gap-2 bg-white text-gray-900 hover:bg-gray-200 px-6 py-3 rounded-full font-semibold text-sm transition duration-300 shadow-md whitespace-nowrap">
+                        <i class="fa-solid fa-headphones"></i> Zum Podcast
+                    </a>
+                </div>
+                
+                <div class="bg-bg p-8 md:p-10 rounded-2xl border border-white/5 text-center flex flex-col justify-between items-center transition hover:border-brand/30 shadow-lg group">
+                    <div>
+                        <div class="w-14 h-14 bg-brand/10 text-brand group-hover:bg-brand/20 rounded-full flex items-center justify-center text-2xl mb-6 mx-auto transition">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-3">Inas Wissens-Blog</h3>
+                        <p class="text-textDim text-sm leading-relaxed mb-8">
+                            Inas Blog widmet sich ganz der biotensegralen Trainingansätze. Erfahre mehr über tensegrale Pferdeausbildung, Faszienketten des Pferdes, den Unterschied zu klassischer Biomechanik und wie eine funktionelle, gesunderhaltende Biotensegrität in der Reitpraxis aussieht.
+                        </p>
+                    </div>
+                    <a href="https://www.equina-pferdetraining.de/blog" target="_blank" class="inline-flex items-center gap-2 bg-white text-gray-900 hover:bg-gray-200 px-6 py-3 rounded-full font-semibold text-sm transition duration-300 shadow-md whitespace-nowrap">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Zum Blog
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
     
